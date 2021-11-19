@@ -1,3 +1,7 @@
+# Docusaurus Starter Boilerplate (Docs Only)
+
+## This Template Is Currently `Working In Progress`
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
