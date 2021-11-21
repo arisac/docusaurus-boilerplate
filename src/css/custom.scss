@@ -16,6 +16,15 @@
   --ifm-code-font-size: 95%;
 }
 
+/**
+ * Search Component UI Override
+ * autocomplete-theme-classic
+ * https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/
+ */
+:root {
+  --aa-primary-color-rgb: 33,175,144!important;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
