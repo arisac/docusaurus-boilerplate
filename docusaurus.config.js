@@ -21,6 +21,10 @@ const config = {
     locales: ['en', 'fr'],
   },
 
+  plugins: [
+    'docusaurus-plugin-sass',
+  ],
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -39,7 +43,7 @@ const config = {
             'https://github.com/facebook/docusaurus/edit/main/website/blog/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
