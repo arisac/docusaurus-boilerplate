@@ -16,6 +16,11 @@ const config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+  },
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -60,6 +65,10 @@ const config = {
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
