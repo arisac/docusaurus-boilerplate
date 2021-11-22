@@ -2,6 +2,26 @@
 
 ## This Template Is Currently `Working In Progress`
 
+*do not fork this repo unless you are going to contribute, this WIP is under a lot of force pushes*
+
+just `clone` or [Use This Template](https://github.com/arisac/docusaurus-starter-boilerplate-docs-only/generate)
+
+### Quick start a preview
+
+```bash
+yarn
+yarn build
+npm run serve
+```
+
+# WIP below
+
+### Start a new language
+
+```bash
+yarn run write-translations -- --locale fr
+```
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
