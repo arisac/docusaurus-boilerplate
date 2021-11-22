@@ -1,5 +1,7 @@
 # Docusaurus Starter Boilerplate (Docs Only)
 
+A Docusaurus pre-config starter template for i18n docs & posts using Docusaurus 2.0.0-beta.9, Typescript, Sass, Local Search
+
 ## This Template Is Currently `Working In Progress`
 
 *do not fork this repo unless you are going to contribute, this WIP is under a lot of force pushes*
