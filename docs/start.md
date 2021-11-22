@@ -12,7 +12,7 @@ You are viewing the latest version of the template demo and neccessary docs to h
 
 ## Start using this template
 
-To use this template, simply `clone` this repo or click [Use This Template](https://github.com/arisac/docusaurus-starter-boilerplate-docs-only/generate) with your Github account.
+To use this template, simply `clone` this repo or click [Use This Template](https://github.com/arisac/docusaurus-boilerplate/generate) with your Github account.
 
 ** Install dependencies **
 
