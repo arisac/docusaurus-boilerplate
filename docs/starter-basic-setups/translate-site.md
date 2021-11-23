@@ -16,13 +16,15 @@ This section will cover:
 
 ## Some Basics
 
-This template has a French translation for docs, but only one `i18n/fr/docusaurus-plugin-content-docs/intro.md` is translated. Because **English** is set as the _default_ language, for other languages, if there is no translation file, the **English** one will be used.
+This template has a French translation for docs, but only one doc, `i18n/fr/docusaurus-plugin-content-docs/intro.md`, is translated. 
 
-## Special config for Chinese (zh)
+Because **English** is set to the _default_ language, for other languages, if there is no translation file, the **English** one will be used.
+
+## Special for Chinese Lanugages (zh) 🇨🇳🇭🇰🇲🇴🇹🇼🇸🇬
 
 The local search plugin in this template use `nodejieba` to index Chinese language. It requires specified nodejs versions, and this is pre-configured in `.nvmrc` file.
 
-If you won't be doing Chinese translation, you have remove `.nvmrc` file and remove `nodejieba` from your project by using:
+If you won't be doing Chinese translation or using other search index services, you can remove `.nvmrc` file and remove `nodejieba` from your project:
 
 ```bash
 yarn remove nodejieba
@@ -30,7 +32,7 @@ yarn remove nodejieba
 
 ## Add/remove a language
 
-### In site configs
+### Configure i18n
 
 Update `defaultLocale` and `locales` in docusaurus config file
 
@@ -57,10 +59,33 @@ const config = {
   ],
 ```
 
-### Docs location
+### Translate a doc
 
-### Blog post location
+Docs for `fr` are placed under `i18n/fr/docusaurus-plugin-content-docs/current/`
 
-### Pages location
+```bash
+mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
+
+cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
+```
+
+Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
+
+### Translate a blog post
+
+Blog posts for `fr` are placed under `i18n/fr/docusaurus-plugin-content-blog`
+
+Copy your blog Markdown files to `i18n/fr/docusaurus-plugin-content-blog`, and translate them:
+
+
+### Translate pages
+
+Pages for `fr` are placed under `i18n/fr/docusaurus-plugin-content-pages`
+
+```bash
+mkdir -p i18n/fr/docusaurus-plugin-content-pages
+cp -r src/pages/**.md i18n/fr/docusaurus-plugin-content-pages
+cp -r src/pages/**.mdx i18n/fr/docusaurus-plugin-content-pages
+```
 
 ## Translate other strings
