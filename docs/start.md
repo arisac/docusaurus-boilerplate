@@ -53,32 +53,15 @@ Nice, isn't it? Since this template has some plugins and settings pre-configured
 
 I believe you are ready to setup this template for your own use. Here's some well ordered guides to start:
 
-### A. Basic Settings
+## Quick Start
 
 1. Basic Configurations
-
 Update Navbar, Sidebar and Footers
+1. Use A Homepage
+1. Turn Off Blog Feature
+1. Translate Site
+1. Deploy your site
 
-1. Use A Homepage Instead of Docs as Landing Page
-1. Turn-off the Blog Feature
-1. Setup for Multi-Languages
-1. Build & Deploy Your Website
+## Intermediate Settings
 
-### B. Intermediate Settings
-
-TBD
-
-- The Site Configs
-- Add a new page
-- Add a new doc
-- Add a new blog post
-- The default page
-- Remove blog feature
-- i18n configurations
-
-Init a new language
-
-```bash
-# replace `fr` for your desired language
-yarn run write-translations -- --locale fr
-```
+tbd

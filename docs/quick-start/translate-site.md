@@ -16,7 +16,7 @@ This section will cover:
 
 ## Some Basics
 
-This template has a French translation for docs, but only one doc, `i18n/fr/docusaurus-plugin-content-docs/intro.md`, is translated. 
+This template has a French translation for docs, but only one doc, `i18n/fr/docusaurus-plugin-content-docs/intro.md`, is translated.
 
 Because **English** is set to the _default_ language, for other languages, if there is no translation file, the **English** one will be used.
 
@@ -77,7 +77,6 @@ Blog posts for `fr` are placed under `i18n/fr/docusaurus-plugin-content-blog`
 
 Copy your blog Markdown files to `i18n/fr/docusaurus-plugin-content-blog`, and translate them:
 
-
 ### Translate pages
 
 Pages for `fr` are placed under `i18n/fr/docusaurus-plugin-content-pages`
@@ -89,3 +88,40 @@ cp -r src/pages/**.mdx i18n/fr/docusaurus-plugin-content-pages
 ```
 
 ## Translate other strings
+
+Translate Navbar, Footer, Global strings in Docs and Blog, i18n strings in code is a ton of works. This template is using `docusaurus-theme-classic`, and it should be no setup for the UI translation out of the box.
+
+Docusaurus provide a quick way to generate json files for all strings supports i18n by running:
+
+```bash
+# replace `fr` for your desired language
+yarn run write-translations -- --locale fr
+```
+
+This will generate the following files:
+
+```diff {5,8,11,12,14}
+  project-root
+  ├── i18n
+  │   └── fr
+  │       ├── docusaurus-plugin-content-blog
++ │       │   └── options.json
+  │       │
+  │       ├── docusaurus-plugin-content-docs
++ │       │   └── current.json
+  │       │
+  │       └── docusaurus-theme-classic
++ │       │   ├── footer.json
++ │       │   └── navbar.json
+  │       │
++ │       └── code.json
+  .
+```
+
+You can continue translating other strings with the generated json files.
+
+## Run local dev server in another language
+
+```bash
+yarn start -- --locale fr
+```
