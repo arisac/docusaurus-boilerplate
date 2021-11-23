@@ -30,11 +30,13 @@
   --aa-selected-color-rgb: 33, 175, 144 !important;
   --aa-description-highlight-background-color-rgb: 31, 165, 136 !important;
   --aa-description-highlight-background-color-alpha: 0.1 !important;
-  --aa-panel-shadow: 0 0 5px 3px rgba(33, 175, 144, 0.3) !important;
+  --aa-panel-shadow: 0 0 5px 5px rgba(33, 175, 144, 0.3) !important;
 }
 
 body.dark, body[data-theme=dark] {
   --aa-background-color-rgb: 25, 25, 25 !important;
+  --aa-input-background-color-rgb: 25, 25, 25 !important;
+  --aa-input-background-color-alpha: 0.1 !important;
   --aa-overlay-color-rgb: 0, 0, 0 !important;
   --aa-overlay-color-alpha: 0.5 !important;
 }
