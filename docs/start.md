@@ -9,7 +9,6 @@ This is a Docusaurus pre-config starter template for i18n docs & posts using Doc
 
 You are viewing the latest version of the template demo and neccessary docs to help you quickly start a docs site. Try browse around this site to see the pre-configed features, full feature list can be find under [Boilerplate Features](./features.md)
 
-
 ## Quick Start this Template
 
 To use this template, simply `clone` this repo or click [Use This Template](https://github.com/arisac/docusaurus-boilerplate/generate) with your Github account.
@@ -57,10 +56,11 @@ I believe you are ready to setup this template for your own use. Here's some wel
 ### A. Basic Settings
 
 1. Basic Configurations
-1. Update Navbar, Sidebar and Footers
+
+Update Navbar, Sidebar and Footers
+
 1. Use A Homepage Instead of Docs as Landing Page
 1. Turn-off the Blog Feature
-1. Create A New Page
 1. Setup for Multi-Languages
 1. Build & Deploy Your Website
 
