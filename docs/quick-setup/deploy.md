@@ -57,7 +57,6 @@ The setup and build experience on 4EVERLAND is quite similar to Vercel. The diff
 By default, the project will be hosted with a domain like `project-name.everland.app` using 4EVERLAND's IPFS gateway and CDNs.
 
 - [Visit 4EVERLAND](https://4everland.org)
-- [Visit 4EVERLAND Hosting Page w/ my referral code](https://hosting.4everland.org/#/?invite=XCYHKZJ4)
 
 ### GitHub Pages
 
