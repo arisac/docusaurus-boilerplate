@@ -5,7 +5,9 @@ slug: /
 
 # Get Started
 
-This is a Docusaurus pre-config starter template for i18n docs & posts using Docusaurus `v2.0.0-beta.9`, Typescript, Sass, Local Search
+This is a **pre-configured Docusaurus starter template** for i18n docs & posts using Docusaurus `v2.0.0-beta.9`, Typescript, Sass, Local Search etc.
+
+A live demo build directly from this repository is deployed on [docusaurus-boilerplate.vercel.app](https://docusaurus-boilerplate.vercel.app) which means you can start a docs site exactly like the demo out of the box.
 
 You are viewing the latest version of the template demo and neccessary docs to help you quickly start a docs site. Try browse around this site to see the pre-configed features, full feature list can be find under [Boilerplate Features](./features.md)
 
@@ -53,15 +55,16 @@ Nice, isn't it? Since this template has some plugins and settings pre-configured
 
 I believe you are ready to setup this template for your own use. Here's some well ordered guides to start:
 
-## Quick Start
+## Quick Setup
 
-1. Basic Configurations
-Update Navbar, Sidebar and Footers
-1. Use A Homepage
-1. Turn Off Blog Feature
-1. Translate Site
-1. Deploy your site
+This will guide you through necessary changes required to make this website as you desired, like change the site name, add/remove languanges etc.:
 
-## Intermediate Settings
+- [Basic Configurations](./quick-setup/basic.md)
+- [Use A Homepage](./quick-setup/use-homepage.md)
+- [Turn Off Blog](./quick-setup/turn-off-blog.md)
+- [Translate Site](./quick-setup/translate-site.md)
+- [Deploy Your Site](./quick-setup/deploy.md)
 
-tbd
+## Extras
+
+If you finished the Quick Setup, and would like to learn more about Docusaurus, the Extras organized some docs from the Docusaurus Official Docs site.

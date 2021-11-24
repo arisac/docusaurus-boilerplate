@@ -2,11 +2,16 @@
 sidebar_position: 3
 ---
 
-# Turn Off Blog Feature
+# Turn Off Blog
 
-If you prefer to have blogs, skip this part. Another way to turn off blog temperarily is to remove blog from all links. Then move to the next section: XXXX
+Blog in a docs site is useful for release notes, updates etc. But it can be turned off by following steps below, or you can just temporarily hide the blog by removing posts in `blog` directory and remove the links to blog in navbar and footer.
 
-However, if you would like to remove blog feature completely, continue on.
+If you prefer to keep blog, forward to the following sections:
+
+- [Translate Site](./translate-site.md)
+- [Deploy Your Site](./deploy.md)
+
+However, if you would like to remove blog feature completely, continue.
 
 ## Remove settings for blog
 

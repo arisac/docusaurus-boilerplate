@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # Basic Configurations
 
-## Change Website Title, URL etc.
+## Site metadata
+
+Website name (title), tagline, URL, navicon, GitHub repository configuarions are located in `docusaurus.config.js`:
 
 ```js title="docusaurus.config.js"
 const config = {
@@ -17,7 +19,9 @@ const config = {
 };
 ```
 
-## GitHub Edit URL
+## GitHub edit URL
+
+Edit on GitHub URL is used in docs and blog. Configuarions are located at the **presets** part in `docusaurus.config.js`:
 
 ```js title="docusaurus.config.js"
 const config = {
@@ -42,6 +46,8 @@ const config = {
 ```
 
 ## Navbar
+
+Website title, logo, and navigation menus configuarions are located at the **themeConfig/navbar** part in `docusaurus.config.js`:
 
 ```js title="docusaurus.config.js"
 const config = {
@@ -79,6 +85,8 @@ const config = {
 
 ## Footer
 
+Links in footer, copyright notice configuarions are located at the **themeConfig/footer** part in `docusaurus.config.js`:
+
 ```js title="docusaurus.config.js"
 const config = {
   themeConfig: {
@@ -89,8 +97,8 @@ const config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/intro",
+              label: "Let\'s Start",
+              to: "/",
             },
           ],
         },

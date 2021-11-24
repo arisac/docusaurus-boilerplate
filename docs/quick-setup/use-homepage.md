@@ -4,7 +4,13 @@ sidebar_position: 2
 
 # Use A Homepage
 
-This template is a setup for docs only website. The `docs` are at the root for this website. If you prefer to stay this way, skip this part and proceed to the next section: Turn Off Blogs Feature.
+Since most project has it's own website, and people sometimes just need to quick start a docs site, this template is pre-configurated for docs only website. The `docs` are at the root for this website.
+
+If you prefer to stay this way without change, forward to the following sections:
+
+- [Turn Off Blog](./turn-off-blog.md)
+- [Translate Site](./translate-site.md)
+- [Deploy Your Site](./deploy.md)
 
 However, if you would like to put `docs` under `yourdomain/docs` and create homepage for the `/` root, continue reading.
 
@@ -121,15 +127,12 @@ Currently this template use `docs/start.md` as homepage.
 
 Remove `slug: /` in the frontmatter and save the file:
 
-
 ```diff {3} title="docs/start.md"
 ---
 sidebar_position: 1
 - slug: /
 ---
 ```
-
-
 
 ### 2. Change docs route path
 

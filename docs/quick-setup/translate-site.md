@@ -6,23 +6,25 @@ sidebar_position: 4
 
 This section will cover:
 
-- Some Basics
-- Special config for Chinese (zh)
+- Basics on Translation in Docusaurus
+- Pre-configs for Chinese Lanugages (zh)
 - Add/remove a language
   - Docs location
   - Blog posts location
   - Pages location
 - Translate default strings, navbar and footer, theme etc.
 
-## Some Basics
+## Basics on Translation in Docusaurus
 
-This template has a French translation for docs, but only one doc, `i18n/fr/docusaurus-plugin-content-docs/intro.md`, is translated.
+This template has a French translation for docs, but only one doc, `i18n/fr/docusaurus-plugin-content-docs/start.md`, is translated.
 
 Because **English** is set to the _default_ language, for other languages, if there is no translation file, the **English** one will be used.
 
-## Special for Chinese Lanugages (zh) 🇨🇳🇭🇰🇲🇴🇹🇼🇸🇬
+## Pre-configs for Chinese Lanugages (zh) 🇨🇳🇭🇰🇲🇴🇹🇼🇸🇬
 
-The local search plugin in this template use `nodejieba` to index Chinese language. It requires specified nodejs versions, and this is pre-configured in `.nvmrc` file.
+This boilerplate is using a Local Search plugin with index for Chinese (zh) support pre-configurated.
+
+The local search plugin uses `nodejieba` to index Chinese language. It requires specified nodejs versions, and this is pre-configured in `.nvmrc` file.
 
 If you won't be doing Chinese translation or using other search index services, you can remove `.nvmrc` file and remove `nodejieba` from your project:
 
