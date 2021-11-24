@@ -20,7 +20,7 @@ This template has a French translation for docs, but only one doc, `i18n/fr/docu
 
 Because **English** is set to the _default_ language, for other languages, if there is no translation file, the **English** one will be used.
 
-## Pre-configs for Chinese Lanugages (zh) 🇨🇳🇭🇰🇲🇴🇹🇼🇸🇬
+## Pre-configs for Chinese (zh) 🇨🇳🇭🇰🇲🇴🇹🇼🇸🇬
 
 This boilerplate is using a Local Search plugin with index for Chinese (zh) support pre-configurated.
 
@@ -34,6 +34,8 @@ yarn remove nodejieba
 
 ## Add/remove a language
 
+This example will guide you to add **Spanish (es)** 🇪🇸 to your website.
+
 ### Configure i18n
 
 Update `defaultLocale` and `locales` in docusaurus config file
@@ -41,52 +43,54 @@ Update `defaultLocale` and `locales` in docusaurus config file
 - defaultLocale: default language
 - locales: languages in this site
 
+Add `es` to locales:
+
 ```js {3,4}title="docusaurus.config.js"
 const config = {
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'fr'],
+    locales: ['en', 'fr', 'es'],
   },
 ```
 
-Update search setting in docusaurus config file
+Update search setting in docusaurus config file, add `es` to the language:
 
 ```js {5} title="docusaurus.config.js"
 const config = {
   plugins: [
     [require.resolve('@cmfcmf/docusaurus-search-local'), {
       // language of your documentation, see next section
-      language: ["en", "fr"],
+      language: ["en", "fr", "es"],
     }]
   ],
 ```
 
 ### Translate a doc
 
-Docs for `fr` are placed under `i18n/fr/docusaurus-plugin-content-docs/current/`
+Docs for `es` are placed under `i18n/es/docusaurus-plugin-content-docs/current/`
 
 ```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
+mkdir -p i18n/es/docusaurus-plugin-content-docs/current/
 
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
+cp docs/start.md i18n/es/docusaurus-plugin-content-docs/current/start.md
 ```
 
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
+Translate `i18n/es/docusaurus-plugin-content-docs/current/start.md` in Spanish.
 
 ### Translate a blog post
 
-Blog posts for `fr` are placed under `i18n/fr/docusaurus-plugin-content-blog`
+Blog posts for `es` are placed under `i18n/es/docusaurus-plugin-content-blog`
 
-Copy your blog Markdown files to `i18n/fr/docusaurus-plugin-content-blog`, and translate them:
+Copy your blog Markdown files to `i18n/es/docusaurus-plugin-content-blog`, and translate them:
 
 ### Translate pages
 
-Pages for `fr` are placed under `i18n/fr/docusaurus-plugin-content-pages`
+Pages for `es` are placed under `i18n/es/docusaurus-plugin-content-pages`
 
 ```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-pages
-cp -r src/pages/**.md i18n/fr/docusaurus-plugin-content-pages
-cp -r src/pages/**.mdx i18n/fr/docusaurus-plugin-content-pages
+mkdir -p i18n/es/docusaurus-plugin-content-pages
+cp -r src/pages/**.md i18n/es/docusaurus-plugin-content-pages
+cp -r src/pages/**.mdx i18n/es/docusaurus-plugin-content-pages
 ```
 
 ## Translate other strings
@@ -96,8 +100,8 @@ Translate Navbar, Footer, Global strings in Docs and Blog, i18n strings in code 
 Docusaurus provide a quick way to generate json files for all strings supports i18n by running:
 
 ```bash
-# replace `fr` for your desired language
-yarn run write-translations -- --locale fr
+# replace `es` for your desired language
+yarn run write-translations -- --locale es
 ```
 
 This will generate the following files:
@@ -105,7 +109,7 @@ This will generate the following files:
 ```diff {5,8,11,12,14}
   project-root
   ├── i18n
-  │   └── fr
+  │   └── es
   │       ├── docusaurus-plugin-content-blog
 + │       │   └── options.json
   │       │
@@ -125,5 +129,5 @@ You can continue translating other strings with the generated json files.
 ## Run local dev server in another language
 
 ```bash
-yarn start -- --locale fr
+yarn start -- --locale es
 ```
