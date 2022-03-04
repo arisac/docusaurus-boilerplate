@@ -26,12 +26,7 @@ const config = {
 
     [require.resolve('@cmfcmf/docusaurus-search-local'), {
       // whether to index docs pages
-
       indexDocs: true,
-      // must start with "/" and correspond to the routeBasePath configured for the docs plugin
-      // use "/" if you use docs-only-mode
-      // (see https://v2.docusaurus.io/docs/2.0.0-alpha.70/docs-introduction#docs-only-mode)
-      docsRouteBasePath: '/',
 
       // Whether to also index the titles of the parent categories in the sidebar of a doc page.
       // 0 disables this feature.
@@ -44,11 +39,6 @@ const config = {
 
       // whether to index blog pages
       indexBlog: true,
-      
-      // must start with "/" and correspond to the routeBasePath configured for the blog plugin
-      // use "/" if you use blog-only-mode
-      // (see https://v2.docusaurus.io/docs/2.0.0-alpha.70/blog#blog-only-mode)
-      blogRouteBasePath: '/blog',
 
       // whether to index static pages
       // /404.html is never indexed
@@ -62,6 +52,7 @@ const config = {
       // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/
       style: undefined,
 
+      // lunr.js-specific settings
       lunr: {
         // When indexing your documents, their content is split into "tokens".
         // Text entered into the search box is also tokenized.
@@ -69,14 +60,33 @@ const config = {
         // By default, it splits the text at whitespace and dashes.
         //
         // Note: Does not work for "ja" and "th" languages, since these use a different tokenizer.
-        tokenizerSeparator: /[\s\-]+/
+        tokenizerSeparator: /[\s\-]+/,
+        // https://lunrjs.com/guides/customising.html#similarity-tuning
+        //
+        // This parameter controls the importance given to the length of a document and its fields. This
+        // value must be between 0 and 1, and by default it has a value of 0.75. Reducing this value
+        // reduces the effect of different length documents on a term’s importance to that document.
+        b: 0.75,
+        // This controls how quickly the boost given by a common word reaches saturation. Increasing it
+        // will slow down the rate of saturation and lower values result in quicker saturation. The
+        // default value is 1.2. If the collection of documents being indexed have high occurrences
+        // of words that are not covered by a stop word filter, these words can quickly dominate any
+        // similarity calculation. In these cases, this value can be reduced to get more balanced results.
+        k1: 1.2,
+        // By default, we rank pages where the search term appears in the title higher than pages where
+        // the search term appears in just the text. This is done by "boosting" title matches with a
+        // higher value than content matches. The concrete boosting behavior can be controlled by changing
+        // the following settings.
+        titleBoost: 5,
+        contentBoost: 1,
+        parentCategoriesBoost: 2, // Only used when indexDocSidebarParentCategories > 0
       }
     }]
   ],
 
   presets: [
     [
-      '@docusaurus/preset-classic',
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -176,6 +186,11 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
       },
       hideableSidebar: true,
     }),

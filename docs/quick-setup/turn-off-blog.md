@@ -23,11 +23,6 @@ const config = {
     [require.resolve('@cmfcmf/docusaurus-search-local'), {
 -      // whether to index blog pages
 -      indexBlog: true,
--
--      // must start with "/" and correspond to the routeBasePath configured for the blog plugin
--      // use "/" if you use blog-only-mode
--      // (see https://v2.docusaurus.io/docs/2.0.0-alpha.70/blog#blog-only-mode)
--      blogRouteBasePath: '/blog',
     }]
   ],
   presets: [

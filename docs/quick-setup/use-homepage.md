@@ -154,27 +154,11 @@ const config = {
 };
 ```
 
-### 3. Update search setting
-
-Change `docsRouteBasePath: '/'` to `docsRouteBasePath: '/docs'`
-
-```diff {4,5} title="docusaurus.config.js"
-const config = {
-  plugins: [
-    [require.resolve('@cmfcmf/docusaurus-search-local'), {
--      docsRouteBasePath: '/',
-+      docsRouteBasePath: '/docs',
-      }
-    }]
-  ],
-};
-```
-
-### 4. Update links
+### 3. Update links
 
 Check for other files if there are links require to be updated.
 
-### 5. Check
+### 4. Check
 
 ```bash
 yarn start
