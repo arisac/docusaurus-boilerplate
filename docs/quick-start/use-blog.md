@@ -1,23 +1,26 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# Turn Off Blog
+# Use Blog
+
+## Add Blog Posts
+
+`WIP`
+
+Create files under `/blog` directory.
+
+More @ https://docusaurus.io/docs/blog
+
+## Remove Blog Feature
 
 Blog in a docs site is useful for release notes, updates etc. But it can be turned off by following steps below, or you can just temporarily hide the blog by removing posts in `blog` directory and remove the links to blog in navbar and footer.
 
-If you prefer to keep blog, forward to the following sections:
-
-- [Translate Site](./translate-site.md)
-- [Deploy Your Site](./deploy.md)
-
-However, if you would like to remove blog feature completely, continue.
-
-## Remove settings for blog
+To remove the blog feature:
 
 Remove the following highlightend lines.
 
-```diff {4-10,16-21} title="docusaurus.config.js"
+```diff {4-5,11-16} title="docusaurus.config.js"
 const config = {
   plugins: [
     [require.resolve('@cmfcmf/docusaurus-search-local'), {

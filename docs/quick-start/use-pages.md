@@ -1,36 +1,26 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Use A Homepage
+# Use Pages
 
-Since most project has it's own website, and people sometimes just need to quick start a docs site, this template is pre-configurated for docs only website. The `docs` are at the root for this website.
+Docusaurus support `MD/MDX/JS/JSX/TSX` format for pages.
 
-If you prefer to stay this way without change, forward to the following sections:
+Files under `src/pages` will be treated as site pages.
 
-- [Turn Off Blog](./turn-off-blog.md)
-- [Translate Site](./translate-site.md)
-- [Deploy Your Site](./deploy.md)
-
-However, if you would like to put `docs` under `yourdomain/docs` and create homepage for the `/` root, continue reading.
-
-## Create a homepage file
-
-File named `index` under `src/pages` will be treated as site homepage by default.
-
-Pages can be in `MD/MDX/JS/JSX/TSX` format.
+## Creating Pages
 
 ### MD Example
 
-Create a file named `index.md` under `src/pages/`.
+Create a file named `demo-page.md` under `src/pages/`.
 
 <details><summary>Click to see MD example code</summary>
 
-```markdown title="src/pages/index.md"
+```markdown title="src/pages/demo-page.md"
 ---
 # Frontmatter, can be empty.
 # Will use site title if empty.
-title: Home
+title: Page Title
 ---
 
 # Markdown Page
@@ -44,13 +34,13 @@ This is a Markdown page
 
 Docusaurus has built-in support for [MDX v1](https://mdxjs.com/), which allows you to write JSX within your Markdown files and render them as React components.
 
-Create a file named `index.mdx` under `src/pages/`.
+Create a file named `demo-page.mdx` under `src/pages/`.
 
 <details><summary>Click to see MDX example code</summary>
 
-```markdown title="src/pages/index.mdx"
+```markdown title="src/pages/demo-page.mdx"
 ---
-title: Home
+title: Page Title
 ---
 
 export const Highlight = ({children, color}) => (
@@ -74,11 +64,11 @@ style={{
 
 ### TSX Example
 
-Create a file named `index.tsx` under `src/pages/`. Docusaurus is based on react, so you can build pages as a react page.
+Create a file named `demo-page.tsx` under `src/pages/`. Docusaurus is based on react, so you can build pages as a react page.
 
 <details><summary>Click to see TSX example code</summary>
 
-```tsx title="src/pages/index.tsx"
+```tsx title="src/pages/demo-page.tsx"
 import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
@@ -103,7 +93,7 @@ function HomepageHeader() {
   );
 }
 
-export default function Home(): JSX.Element {
+export default function Page(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
@@ -119,9 +109,31 @@ export default function Home(): JSX.Element {
 
 </details>
 
-## Configurations
+## Use Page for Homepage
 
-### 1. Update default docs file
+Since most project has it's own website, and people sometimes just need to quick start a docs site, this template is pre-configurated for docs focused site. The `docs` is at the root for this website.
+
+### 1. Create a homepage file
+
+File named `index` under `src/pages` will be treated as site homepage by default.
+
+This can be in `MD/MDX/JS/JSX/TSX` format.
+
+<details><summary>Click to see MD example code</summary>
+
+```markdown title="src/pages/index.md"
+---
+title: Home
+---
+
+# Markdown Page
+
+This is a Markdown page
+```
+
+</details>
+
+### 2. Update default docs file
 
 Currently this template use `docs/start.md` as homepage.
 
@@ -134,19 +146,19 @@ sidebar_position: 1
 ---
 ```
 
-### 2. Change docs route path
+### 3. Change docs route path
 
-Remove the line of `routeBasePath: '/'`
+Change the line of `routeBasePath: '/'` under docs presets:
 
-```diff {8} title="docusaurus.config.js"
+```diff {7,8} title="docusaurus.config.js"
 const config = {
   presets: [
     [
-      "@docusaurus/preset-classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      'classic',
       ({
         docs: {
--          routeBasePath: "/",
+-          routeBasePath: '/',
++          routeBasePath: '/docs',
         },
       }),
     ],
@@ -154,11 +166,11 @@ const config = {
 };
 ```
 
-### 3. Update links
+### 4. Update links
 
 Check for other files if there are links require to be updated.
 
-### 4. Check
+### 5. Check
 
 ```bash
 yarn start

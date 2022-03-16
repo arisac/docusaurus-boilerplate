@@ -2,9 +2,11 @@
 sidebar_position: 1
 ---
 
-# Basic Configurations
+# Quick Start
 
-## Site metadata
+## Basic Configurations
+
+### Site metadata
 
 Website name (title), tagline, URL, navicon, GitHub repository configuarions are located in `docusaurus.config.js`:
 
@@ -19,16 +21,15 @@ const config = {
 };
 ```
 
-## GitHub edit URL
+### GitHub edit URL
 
 Edit on GitHub URL is used in docs and blog. Configuarions are located at the **presets** part in `docusaurus.config.js`:
 
-```js title="docusaurus.config.js"
+```js title="docusaurus.config.js" {7,8,12,13}
 const config = {
   presets: [
     [
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           // Please change this to your repo.
           editUrl:
@@ -39,13 +40,13 @@ const config = {
           editUrl:
             "https://github.com/arisac/docusaurus-boilerplate/edit/main/blog/",
         },
-      }),
+      },
     ],
   ],
 };
 ```
 
-## Navbar
+### Navbar
 
 Website title, logo, and navigation menus configuarions are located at the **themeConfig/navbar** part in `docusaurus.config.js`:
 
@@ -83,7 +84,7 @@ const config = {
 };
 ```
 
-## Footer
+### Footer
 
 Links in footer, copyright notice configuarions are located at the **themeConfig/footer** part in `docusaurus.config.js`:
 
@@ -97,7 +98,7 @@ const config = {
           title: "Docs",
           items: [
             {
-              label: "Let\'s Start",
+              label: "Let's Start",
               to: "/",
             },
           ],

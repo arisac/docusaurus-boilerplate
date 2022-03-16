@@ -17,9 +17,11 @@ A live demo build directly from this repository is deployed on [docusaurus-boile
 
 You are viewing the latest version of the template demo and neccessary docs to help you quickly start a docs site. Try browse around this site to see the pre-configed features, full feature list can be find under [Boilerplate Features](./features.md)
 
-## Quick Start this Template
+## Start with this Template
 
-To use this template, simply `clone` this repo or click [Use This Template](https://github.com/arisac/docusaurus-boilerplate/generate) with your Github account.
+To use this template, simply **clone** this repo or click [Use This Template](https://github.com/arisac/docusaurus-boilerplate/generate) with your Github account.
+
+Once cloned to your local machine,
 
 **Install dependencies**
 
@@ -55,22 +57,8 @@ npm run serve
 
 Now the site is running with full features of this template. Just like the demo on https://docusaurus-boilerplate.vercel.app.
 
-## Let's Start to Setup Your Own
+## Setup Your Own
 
-Nice, isn't it? Since this template has some plugins and settings pre-configured, it meets the most demands.
+This template has some plugins and settings pre-configured, it meets the most demands.
 
-I believe you are ready to setup this template for your own use. Here's some well ordered guides to start:
-
-## Quick Setup
-
-This will guide you through necessary changes required to make this website as you desired, like change the site name, add/remove languanges etc.:
-
-- [Basic Configurations](./quick-setup/basic.md)
-- [Use A Homepage](./quick-setup/use-homepage.md)
-- [Turn Off Blog](./quick-setup/turn-off-blog.md)
-- [Translate Site](./quick-setup/translate-site.md)
-- [Deploy Your Site](./quick-setup/deploy.md)
-
-## Extras
-
-If you finished the Quick Setup, and would like to learn more about Docusaurus, the Extras organized some docs from the Docusaurus Official Docs site.
+Continue to [Quick Start](./quick-start/index.md) to config the website for your own need.

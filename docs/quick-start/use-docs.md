@@ -1,0 +1,141 @@
+---
+sidebar_position: 2
+---
+
+# Use Docs
+
+Docs are located under `/docs` directory by default.
+
+## Create a doc
+
+Create a Markdown file, `greeting.md`, and place it under the `/docs` directory.
+
+```bash
+website # root directory of your site
+├── docs
+│   └── greeting.md
+├── ...
+```
+
+## Front Matter
+
+```md title="Front Matter Demo"
+---
+title: Name Of Doc
+id: your-doc
+slug: /your-doc
+description: Create a Markdown Document
+tags:
+  - Demo
+  - Getting started
+sidebar_position: 10
+---
+```
+
+### `title` for doc Title
+
+- This field is **optional**, by default `h1` in document body will be used for the title.
+
+- Use `title` in Front Matter will change the sitebar and webpage title. 
+
+- If there is no `h1` in the document body, `title` will be used in the page.
+
+### `id` for doc Identifier
+
+- This field is **optional**, by default the filename of the doc is used as `id` for the document.
+
+- `id` is also used in the url to the doc by default.
+
+- `id` is unique when linking resources, such as use `docId` to link to the doc in navbar.
+
+- Sometimes multiple docs can have the same filename under different directory, to use `docId` to link these 2 docs, different `id` should be set.
+
+```bash title="e.g. same filename"
+website # root directory of your site
+├── docs
+│   └── guide-for-something
+│   │   └── `step-1.md`
+│   └── guide-for-something-else
+│       └── `step-1.md`
+├── ...
+```
+
+### `slug` for doc Url
+
+- This field is **optional**, by default docusaurus will use `directory/filename` or `directory/docId` as the url for the doc.
+
+- You can override the default url by using `slug` field. Even create non-exsiting directorys:
+
+```json title="e.g. slug for custom url"
+// doc location
+├── docs
+│   └── demo
+│   │   └── docname
+├── ...
+
+// Front Matter slug Override
+slug: /this/is/a/cool/name
+```
+
+When Docs routeBasePath is `/docs`, that doc url will be `your.domain/docs/this/is/a/cool/name` other than the default `your.domain/docs/demo/docname`.
+
+### `description` field
+
+- This field is **optional**.
+
+- Can be useful for SEO.
+
+### `tags` field
+
+- This field is **optional**.
+
+:::note
+
+Tags in `docs` and `blog` are not shared, they are in separated namespaces.
+
+:::
+
+### `sidebar_position` field
+
+- This field is **optional**, but it's recommended to set mannually to keep the docs in order.
+
+- `sidebar_position` set the orders of docs in the same directory level.
+
+- This also orders the `Previous / Next` page feature.
+
+## Docs routeBasePath
+
+- This template uses `/` as docs **routeBasePath** by default.
+
+- As this doc `/docs/quick-setup/use-docs.md` is using url: `your.domain/quick-setup/use-docs`.
+
+### Change Docs routeBasePath
+
+- Use `/docs` as Docs routeBasePath will move docs under `your.domain/docs/`.
+
+- Then this doc's url will be changed to `your.domain/docs/quick-setup/use-docs`.
+
+```diff title="docusaurus.config.js"
+const config = {
+  presets: [
+    [
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+-          routeBasePath: '/',
++          routeBasePath: '/docs',
+        },
+      }),
+    ],
+  ],
+};
+```
+
+:::note
+
+This template uses `/docs/start.md` as homepage.
+
+After changing routeBasePath from '/' to other location, the homepage will unable to access, You will need to [create a homepage](./use-pages.md) after changing the docs routeBasePath.
+
+:::
