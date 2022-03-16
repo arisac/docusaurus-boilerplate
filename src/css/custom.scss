@@ -6,13 +6,21 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: rgb(37, 193, 159);
+  --site-color-primary-rgb: 37, 193, 159;
   --ifm-color-primary-dark: rgb(33, 175, 144);
+  --site-color-primary-dark-rgb: 33, 175, 144;
   --ifm-color-primary-darker: rgb(31, 165, 136);
+  --site-color-primary-darker-rgb: 31, 165, 136;
   --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --site-color-primary-darke-rgb: 26, 136, 112;
   --ifm-color-primary-light: rgb(70, 203, 174);
+  --site-color-primary-light-rgb: 70, 203, 174;
   --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --site-color-primary-lighter-rgb: 102, 212, 189;
   --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --site-color-primary-lightest-rgb: 146, 224, 208;
+  --ifm-link-color: rgb(var(--site-color-primary-rgb)) !important;
   --ifm-code-font-size: 95%;
 }
 
@@ -24,13 +32,13 @@
 :root,
 body.dark,
 body[data-theme="dark"] {
-  --aa-primary-color-rgb: 33, 175, 144 !important;
-  --aa-muted-color-rgb: 33, 175, 144 !important;
+  --aa-primary-color-rgb: var(--site-color-primary-rgb) !important;
+  --aa-muted-color-rgb: var(--site-color-primary-dark-rgb) !important;
   --aa-muted-color-alpha: 0.5 !important;
   // --aa-panel-border-color-rgb: 33, 175, 144 !important;
-  --aa-input-border-color-rgb: 33, 175, 144 !important;
-  --aa-selected-color-rgb: 33, 175, 144 !important;
-  --aa-description-highlight-background-color-rgb: 31, 165, 136 !important;
+  --aa-input-border-color-rgb: var(--site-color-primary-dark-rgb) !important;
+  --aa-selected-color-rgb: var(--site-color-primary-dark-rgb) !important;
+  --aa-description-highlight-background-color-rgb: var(--site-color-primary-darker-rgb) !important;
   --aa-description-highlight-background-color-alpha: 0.1 !important;
   --aa-panel-shadow: none !important;
 }
