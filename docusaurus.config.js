@@ -136,7 +136,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        hideOnScroll: true,
+        hideOnScroll: false,
         title: 'Docusaurus Boilerplate',
         logo: {
           alt: 'Docusaurus Logo',
@@ -208,8 +208,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Docusaurus Boilerplate. Built with Docusaurus.`,
       },
       prism: {
-        theme: require('prism-react-renderer/themes/github'),
-        darkTheme: require('prism-react-renderer/themes/dracula'),
+        theme: require('prism-react-renderer/themes/palenight'),
+        darkTheme: require('prism-react-renderer/themes/palenight'),
       },
       colorMode: {
         defaultMode: 'light',
