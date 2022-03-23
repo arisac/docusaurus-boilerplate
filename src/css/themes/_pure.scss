@@ -45,7 +45,7 @@ $dark-theme: (
     border-radius: 12px;
     overflow: hidden;
   }
-  .codeBlockTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module {
+  [class^="codeBlockTitle_"] {
     border-color: rgba(255, 255, 255, 0.15);
   }
   .breadcrumbs__link {
