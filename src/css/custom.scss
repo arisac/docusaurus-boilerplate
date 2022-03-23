@@ -4,79 +4,16 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: rgb(37, 193, 159);
-  --site-color-primary-rgb: 37, 193, 159;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --site-color-primary-dark-rgb: 33, 175, 144;
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --site-color-primary-darker-rgb: 31, 165, 136;
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --site-color-primary-darke-rgb: 26, 136, 112;
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --site-color-primary-light-rgb: 70, 203, 174;
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --site-color-primary-lighter-rgb: 102, 212, 189;
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --site-color-primary-lightest-rgb: 146, 224, 208;
-  --ifm-link-color: rgb(var(--site-color-primary-rgb)) !important;
-  --ifm-code-font-size: 95%;
-}
+@use "sass:color";
+@use "sass:map";
+@import "helpers";
 
-/**
- * Search Component UI Override
- * autocomplete-theme-classic
- * https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/
- */
-:root,
-body.dark,
-body[data-theme="dark"] {
-  --aa-primary-color-rgb: var(--site-color-primary-rgb) !important;
-  --aa-muted-color-rgb: var(--site-color-primary-dark-rgb) !important;
-  --aa-muted-color-alpha: 0.5 !important;
-  // --aa-panel-border-color-rgb: 33, 175, 144 !important;
-  --aa-input-border-color-rgb: var(--site-color-primary-dark-rgb) !important;
-  --aa-selected-color-rgb: var(--site-color-primary-dark-rgb) !important;
-  --aa-description-highlight-background-color-rgb: var(--site-color-primary-darker-rgb) !important;
-  --aa-description-highlight-background-color-alpha: 0.1 !important;
-  --aa-panel-shadow: none !important;
-}
+// Themes are WIP
+// Change Theme Appearance Profile
+@import "themes/pure"; 
+// "themes/pure": a cleaner theme
+// "themes/classic": default docusaurus classic theme profile
 
-.aa-DetachedSearchButton {
-  border-radius: 9999px !important;
-  border-color: rgba(var(--aa-input-border-color-rgb), 0.1) !important;
-  &:hover {
-    border-color: rgba(var(--aa-input-border-color-rgb), 1) !important;
-  }
-}
-
-:root {
-  // Overlay
-  --aa-overlay-color-rgb: 0, 0, 0 !important;
-  --aa-overlay-color-alpha: 0.5 !important;
-}
-
-body.dark,
-body[data-theme="dark"] {
-  --aa-background-color-rgb: 25, 25, 25 !important;
-  --aa-input-background-color-rgb: 25, 25, 25 !important;
-  --aa-input-background-color-alpha: 0.1 !important;
-  // Overlay
-  --aa-overlay-color-rgb: 47, 55, 69 !important;
-  --aa-overlay-color-alpha: 0.75 !important;
-}
-
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-}
-
-html[data-theme="dark"] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
-}
 
 // Nav Github Icon
 .header-github-link:hover {
@@ -101,21 +38,21 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 div[class^="announcementBar_"] {
   background: linear-gradient(
     124deg,
-    #ff8370,
-    #fdafaf,
-    #ffedb3,
-    #feffa8,
+    #f7a598,
+    #fccaca,
+    #fdf1c9,
+    #f9fabf,
     #a7ffb6,
     #93f6fc,
     #bdb8ff,
     #f7b8fd,
-    #f2bcf7
+    #f5d5f8
   );
   background-size: 1000% 1000%;
-  animation: bgRoll 15s ease infinite;
+  animation: bgAnimate 15s ease infinite;
   font-weight: 600;
 }
-@keyframes bgRoll {
+@keyframes bgAnimate {
   0% {
     background-position: 0% 82%;
   }

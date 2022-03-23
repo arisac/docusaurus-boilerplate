@@ -1,0 +1,181 @@
+// Create a file `theme_base.scss` to override settings
+
+/* Infima UI */
+:root {
+  --ifm-color-primary: #{map.get($light-theme, "color-primary")};
+  --site-color-primary-rgb: #{red(map.get($light-theme, "color-primary")),
+    green(map.get($light-theme, "color-primary")),
+    blue(map.get($light-theme, "color-primary"))};
+
+  --ifm-color-primary-dark: #{map.get($light-theme, "color-primary-dark")};
+  --site-color-primary-dark-rgb: #{red(
+        map.get($light-theme, "color-primary-dark")
+      ),
+    green(map.get($light-theme, "color-primary-dark")),
+    blue(map.get($light-theme, "color-primary-dark"))};
+
+  --ifm-color-primary-darker: #{map.get($light-theme, "color-primary-darker")};
+  --site-color-primary-darker-rgb: #{red(
+        map.get($light-theme, "color-primary-darker")
+      ),
+    green(map.get($light-theme, "color-primary-darker")),
+    blue(map.get($light-theme, "color-primary-darker"))};
+
+  --ifm-color-primary-darkest: #{map.get($light-theme, "color-primary-darkest")};
+  --site-color-primary-darkest-rgb: #{red(
+        map.get($light-theme, "color-primary-darkest")
+      ),
+    green(map.get($light-theme, "color-primary-darkest")),
+    blue(map.get($light-theme, "color-primary-darkest"))};
+
+  --ifm-color-primary-light: #{map.get($light-theme, "color-primary-light")};
+  --site-color-primary-light-rgb: #{red(
+        map.get($light-theme, "color-primary-light")
+      ),
+    green(map.get($light-theme, "color-primary-light")),
+    blue(map.get($light-theme, "color-primary-light"))};
+
+  --ifm-color-primary-lighter: #{map.get($light-theme, "color-primary-lighter")};
+  --site-color-primary-lighter-rgb: #{red(
+        map.get($light-theme, "color-primary-lighter")
+      ),
+    green(map.get($light-theme, "color-primary-lighter")),
+    blue(map.get($light-theme, "color-primary-lighter"))};
+
+  --ifm-color-primary-lightest: #{map.get(
+      $light-theme,
+      "color-primary-lightest"
+    )};
+  --site-color-primary-lightest-rgb: #{red(
+        map.get($light-theme, "color-primary-lightest")
+      ),
+    green(map.get($light-theme, "color-primary-lightest")),
+    blue(map.get($light-theme, "color-primary-lightest"))};
+
+  --ifm-link-color: var(--ifm-color-primary);
+
+  --ifm-background-color: #{map.get($light-theme, "color-background")};
+
+  --ifm-navbar-background-color: #{map.get(
+      $light-theme,
+      "navbar-background-color"
+    )};
+}
+
+[data-theme="dark"] {
+  --ifm-color-primary: #{map.get($dark-theme, "color-primary")};
+  --site-color-primary-rgb: #{red(map.get($dark-theme, "color-primary")),
+    green(map.get($dark-theme, "color-primary")),
+    blue(map.get($dark-theme, "color-primary"))};
+
+  --ifm-color-primary-dark: #{map.get($dark-theme, "color-primary-dark")};
+  --site-color-primary-dark-rgb: #{red(
+        map.get($dark-theme, "color-primary-dark")
+      ),
+    green(map.get($dark-theme, "color-primary-dark")),
+    blue(map.get($dark-theme, "color-primary-dark"))};
+
+  --ifm-color-primary-darker: #{map.get($dark-theme, "color-primary-darker")};
+  --site-color-primary-darker-rgb: #{red(
+        map.get($dark-theme, "color-primary-darker")
+      ),
+    green(map.get($dark-theme, "color-primary-darker")),
+    blue(map.get($dark-theme, "color-primary-darker"))};
+
+  --ifm-color-primary-darkest: #{map.get($dark-theme, "color-primary-darkest")};
+  --site-color-primary-darkest-rgb: #{red(
+        map.get($dark-theme, "color-primary-darkest")
+      ),
+    green(map.get($dark-theme, "color-primary-darkest")),
+    blue(map.get($dark-theme, "color-primary-darkest"))};
+
+  --ifm-color-primary-light: #{map.get($dark-theme, "color-primary-light")};
+  --site-color-primary-light-rgb: #{red(
+        map.get($dark-theme, "color-primary-light")
+      ),
+    green(map.get($dark-theme, "color-primary-light")),
+    blue(map.get($dark-theme, "color-primary-light"))};
+
+  --ifm-color-primary-lighter: #{map.get($dark-theme, "color-primary-lighter")};
+  --site-color-primary-lighter-rgb: #{red(
+        map.get($dark-theme, "color-primary-lighter")
+      ),
+    green(map.get($dark-theme, "color-primary-lighter")),
+    blue(map.get($dark-theme, "color-primary-lighter"))};
+
+  --ifm-color-primary-lightest: #{map.get($dark-theme, "color-primary-lightest")};
+  --site-color-primary-lightest-rgb: #{red(
+        map.get($dark-theme, "color-primary-lightest")
+      ),
+    green(map.get($dark-theme, "color-primary-lightest")),
+    blue(map.get($dark-theme, "color-primary-lightest"))};
+
+  --ifm-link-color: var(--ifm-color-primary);
+
+  --ifm-background-color: #{map.get($dark-theme, "color-background")};
+
+  --ifm-navbar-background-color: #{map.get(
+      $dark-theme,
+      "navbar-background-color"
+    )};
+}
+
+/**
+ * Search Component UI Override
+ * autocomplete-theme-classic
+ * https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/
+ */
+:root,
+[data-theme="dark"] {
+  --aa-primary-color-rgb: var(--site-color-primary-rgb) !important;
+  --aa-muted-color-rgb: var(--site-color-primary-dark-rgb) !important;
+  --aa-muted-color-alpha: 0.5 !important;
+  // --aa-panel-border-color-rgb: 33, 175, 144 !important;
+  --aa-input-border-color-rgb: var(--site-color-primary-dark-rgb) !important;
+  --aa-selected-color-rgb: var(--site-color-primary-dark-rgb) !important;
+  --aa-description-highlight-background-color-rgb: var(
+    --site-color-primary-darker-rgb
+  ) !important;
+  --aa-description-highlight-background-color-alpha: 0.1 !important;
+  --aa-panel-shadow: none !important;
+}
+
+.aa-DetachedSearchButton {
+  border-radius: 9999px !important;
+  border-color: rgba(var(--aa-input-border-color-rgb), 0.2) !important;
+  &:hover {
+    border-color: rgba(var(--aa-input-border-color-rgb), 1) !important;
+  }
+}
+
+:root {
+  // Overlay
+  --aa-overlay-color-rgb: 0, 0, 0 !important;
+  --aa-overlay-color-alpha: 0.5 !important;
+}
+
+[data-theme="dark"] {
+  --aa-background-color-rgb: 25, 25, 25 !important;
+  --aa-input-background-color-rgb: 25, 25, 25 !important;
+  --aa-input-background-color-alpha: 0.1 !important;
+  // Overlay
+  --aa-overlay-color-rgb: 47, 55, 69 !important;
+  --aa-overlay-color-alpha: 0.75 !important;
+}
+
+// Code Block
+:root {
+  --ifm-code-font-size: 95%;
+}
+
+// Code Highlight-line
+.docusaurus-highlight-code-line {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
