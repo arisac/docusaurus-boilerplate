@@ -48,7 +48,7 @@ $dark-theme: (
   .codeBlockTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module {
     border-color: rgba(255, 255, 255, 0.15);
   }
-  .breadcrumbsItemLink_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocBreadcrumbs-styles-module {
+  .breadcrumbs__link {
     background-color: rgba(0, 0, 0, 0) !important;
     &:hover {
       background-color: rgba(15, 23, 42, 0.05) !important;
@@ -73,7 +73,7 @@ $dark-theme: (
     border-radius: 12px;
     overflow: hidden;
   }
-  .breadcrumbsItemLink_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocBreadcrumbs-styles-module {
+  .breadcrumbs__link {
     &:hover {
       background-color: rgba(255, 255, 255, 0.1) !important;
     }
