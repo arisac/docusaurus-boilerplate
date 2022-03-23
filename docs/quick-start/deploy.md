@@ -52,9 +52,11 @@ For every push happened to `main` branch, vercel will rebuild the production sit
 
 ### 4EVERLAND
 
+A demo of this boilerplate is also hosted on 4EVERLAND 👉 [docusaurus-boilerplate.4everland.app](https://docusaurus-boilerplate.4everland.app/)
+
 The setup and build experience on 4EVERLAND is quite similar to Vercel. The differenct is 4EVERLAND is focused on web 3.0 and actually stores the built sites on IPFS than it's own servers. Each built has an IPFS CID and can be accessed for other IPFS nodes or IPFS gateways.
 
-By default, the project will be hosted with a domain like `project-name.everland.app` using 4EVERLAND's IPFS gateway and CDNs.
+By default, the project will be hosted with a domain like `project-name.4everland.app` using 4EVERLAND's IPFS gateway and CDNs.
 
 - [Visit 4EVERLAND](https://4everland.org)
 
