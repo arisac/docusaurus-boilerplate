@@ -20,15 +20,9 @@ const config = {
 
 ## Code Block Theme
 
-```js {4,5} title="docusaurus.config.js"
-const config = {
-  themeConfig: {
-    prism: {
-      theme: require("prism-react-renderer/themes/github"),
-      darkTheme: require("prism-react-renderer/themes/dracula"),
-    },
-  },
-};
+```js title="docusaurus.config.js"
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 ```
 
 ## Custom CSS
