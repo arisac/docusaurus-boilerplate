@@ -5,7 +5,7 @@ slug: /
 
 # Commencer
 
-Il s'agit d'un **template Docusaurus pré-configuré** pour les documents et les articles i18n utilisant Docusaurus `v2.0.0-beta.17`, Typescript, Sass, Local Search etc.
+Il s'agit d'un **template Docusaurus pré-configuré** pour les documents et les articles i18n utilisant Docusaurus `v2.0.0-beta.18`, Typescript, Sass, Local Search etc.
 
 :::note
 
