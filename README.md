@@ -1,6 +1,6 @@
 # Docusaurus Boilerplate
 
-This is a **pre-configured Docusaurus starter template** for i18n docs & posts using Docusaurus `v2.0.0-beta.18`, Typescript, Sass, Local Search etc.
+This is a **pre-configured Docusaurus starter template** for i18n docs & posts using Docusaurus `v2.0.0-beta.21`, Typescript, Sass, Local Search etc.
 
 A live demo build directly from this repository is deployed on [docusaurus-boilerplate.vercel.app](https://docusaurus-boilerplate.vercel.app) which means you can start a docs site exactly like the demo out of the box.
 
@@ -18,9 +18,7 @@ A live demo build directly from this repository is deployed on [docusaurus-boile
 
 ## Documentation
 
-This Template Is Currently `Working In Progress`
-
-*do not fork this repo unless you are going to contribute, this WIP is under a lot of force pushes*
+*do not fork this repo unless you are going to contribute*
 
 just `clone` or [Use This Template](https://github.com/arisac/docusaurus-starter-boilerplate-docs-only/generate)
 
