@@ -147,10 +147,19 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'start',
+            to: '/quick-start',
             position: 'left',
-            label: 'Let\'s Start',
+            label: 'Quick Start',
+          },
+          {
+            to: '/intermediate',
+            position: 'left',
+            label: 'Intermediate',
+          },
+          {
+            to: '/extras',
+            position: 'left',
+            label: 'Extras',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
@@ -219,11 +228,15 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      hideableSidebar: true,
       announcementBar: {
         id: 'announcementBar-0', // Increment on change
         content: `⭐️ If you like this Docusaurus Boilerplate, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arisac/docusaurus-boilerplate">GitHub</a> and follow me on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/arisdotac" >${TwitterSvg} Twitter</a>`,
         isCloseable: true,
+      },
+      docs: {
+        sidebar: {
+          hideable: true
+        },
       },
     }),
 };
