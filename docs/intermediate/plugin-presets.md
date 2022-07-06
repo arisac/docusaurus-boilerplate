@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
+description: Plugin Presets for Docs, Blog etc.
 ---
 
 # Plugin Presets

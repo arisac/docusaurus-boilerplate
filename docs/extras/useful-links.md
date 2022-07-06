@@ -1,5 +1,6 @@
 ---
-sidebar_position: 10
+sidebar_position: 30
+description: More for using Docusaurus
 ---
 
 # Useful Links

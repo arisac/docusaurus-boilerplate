@@ -1,5 +1,10 @@
+---
+sidebar_position: 1
+---
+
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
 # Intermediate
 
-- [Plugin Presets](./plugin-presets.md)
-
-- [Theme](./theme.md)
+<DocCardList items={useCurrentSidebarCategory().items}/>

@@ -1,5 +1,6 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
+description: Theme Color, Custom CSS, Custom Themes
 ---
 
 # Theme
