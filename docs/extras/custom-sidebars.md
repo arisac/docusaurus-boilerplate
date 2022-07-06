@@ -39,7 +39,7 @@ const sidebars = {
 
 All docs under `./docs/extras` directory will use this sidebar.
 
-### Config ually
+### Config Manually
 
 To manually assign docs with an individual sidebar, include the docs with a custom sidebar:
 
