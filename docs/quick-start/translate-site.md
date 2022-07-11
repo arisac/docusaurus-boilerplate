@@ -20,18 +20,6 @@ This template has a French translation for docs, but only one doc, `i18n/fr/docu
 
 Because **English** is set to the _default_ language, for other languages, if there is no translation file, the **English** one will be used.
 
-## Pre-configs for Chinese (zh) 🇨🇳🇭🇰🇲🇴🇹🇼🇸🇬
-
-This boilerplate is using a Local Search plugin with index for Chinese (zh) support pre-configurated.
-
-The local search plugin uses `nodejieba` to index Chinese language. It requires specified nodejs versions, and this is pre-configured in `.nvmrc` file.
-
-If you won't be doing Chinese translation or using other search index services, you can remove `.nvmrc` file and remove `nodejieba` from your project:
-
-```bash
-yarn remove nodejieba
-```
-
 ## Add/remove a language
 
 This example will guide you to add **Spanish (es)** 🇪🇸 to your website.
