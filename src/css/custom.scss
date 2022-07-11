@@ -63,3 +63,10 @@ div[class^="announcementBar_"] {
     background-position: 0% 82%;
   }
 }
+
+article .markdown {
+  & .twitter-tweet-rendered,
+  & .twitter-tweet {
+    margin: auto;
+  }
+}
